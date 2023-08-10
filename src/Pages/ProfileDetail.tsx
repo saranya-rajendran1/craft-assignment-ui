@@ -64,32 +64,7 @@ export function ProfileDetail() {
     setPan(data?.taxIdentifier)
     setWebsite(data?.website)
 
-  },[details])
-
-  const  clearValue = () => {
-    setEmail("")
-    setCompanyName("")
-    setLegalName("")
-    setBusinessAddress({
-    line1: "",
-    line2: "",
-    city: "",
-    state: "",
-    postalCode: "",
-    country: "",
-  })
-  setLegalAddress({
-    line1: "",
-    line2: "",
-    city: "",
-    state: "",
-    postalCode: "",
-    country: "",
-  })
-  setPan("")
-  setWebsite("")
-
-  }
+  },[details, data])
 
   function CheckError() {
     const validToSubmit =
@@ -116,7 +91,7 @@ export function ProfileDetail() {
   function saveFunction() {
     setSaveClicked(true);
     const body = {
-      userId: "f84ec623-276f-41d9-a5a4-0bbff042727d",
+      userId: "e2bfa759-9cec-443b-9b39-db77d53099d1",
       companyName: companyName,
       legalName: legalName,
       companyAddress: {
